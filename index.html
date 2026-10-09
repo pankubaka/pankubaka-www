@@ -7,13 +7,13 @@
 <meta name="description" content="Kuba Karaś (Pan KuBaka): 11 lat na YouTube, dziennikarz growy Filmweb.pl, Social Media Manager marek ENDORFY i Krux. Wideo, kampanie i branża gier.">
 <meta name="theme-color" content="#0D0C17">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://pankubaka.pl/">
+<link rel="canonical" href="https://www.zatrudnij.pankubaka.pl/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pl_PL">
 <meta property="og:title" content="Kuba Karaś – Player 1 Ready">
 <meta property="og:description" content="Content creator, dziennikarz growy i social media manager. Wybierz poziom.">
-<meta property="og:url" content="https://pankubaka.pl/">
-<meta property="og:image" content="https://pankubaka.pl/og.jpg">
+<meta property="og:url" content="https://www.zatrudnij.pankubaka.pl/">
+<meta property="og:image" content="https://www.zatrudnij.pankubaka.pl/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -121,9 +121,13 @@ h3{margin:0;font-size:22px;font-weight:400;line-height:1.5}
 .glitch{animation:bob .6s steps(2) infinite}
 .gone{display:none}
 #hero{z-index:2}
+@media (max-width:900px){
+  .hero{gap:32px}
+  .card{order:-1;flex-basis:100%;max-width:420px}
+}
 @media (max-width:600px){
   body{font-size:17px}
-  .hero{padding-top:56px}
+  .hero{padding-top:32px}
   .lead{font-size:19px}
   .lvl{padding:24px;gap:24px}
   .track{left:24px;right:24px}
