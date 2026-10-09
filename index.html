@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuba Karaś – content creator, dziennikarz growy, social media manager</title>
+<meta name="description" content="Kuba Karaś (Pan KuBaka): 11 lat na YouTube, dziennikarz growy Filmweb.pl, Social Media Manager marek ENDORFY i Krux. Wideo, kampanie i branża gier.">
+<meta name="theme-color" content="#0D0C17">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://pankubaka.pl/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Kuba Karaś – Player 1 Ready">
+<meta property="og:description" content="Content creator, dziennikarz growy i social media manager. Wybierz poziom.">
+<meta property="og:url" content="https://pankubaka.pl/">
+<meta property="og:image" content="https://pankubaka.pl/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0D0C17; --panel:#17152A; --panel2:#221F3B; --line:#3A3658;
+  --text:#E9E6F5; --soft:#D6D2EA; --muted:#A8A3C4; --dim:#6E6990;
+  --accent:#3DE0E0; --pink:#FF4D8D; --yellow:#FFD23F;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Space Grotesk',system-ui,sans-serif;font-size:18px;line-height:1.6;padding-bottom:120px;overflow-x:hidden}
+a{color:var(--accent)}a:hover{color:#8FF3F3}
+a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.px{font-family:'Press Start 2P',monospace}
+section[id],article[id]{scroll-margin-top:24px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:24px;padding-right:24px}
+.scan{position:fixed;inset:0;pointer-events:none;z-index:5;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0,rgba(0,0,0,.18) 1px,transparent 1px,transparent 3px)}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.blink{animation:blink 1.1s steps(1) infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-3px)}}
+
+/* nav */
+header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-top:24px}
+.logo{font-size:12px;color:var(--text);text-decoration:none}
+.logo span{color:var(--accent)}
+nav{display:flex;flex-wrap:wrap;gap:8px}
+.navlink{font-size:10px;text-decoration:none;padding:14px 12px;color:var(--muted)}
+.navlink:hover{color:var(--text)}
+.navlink.cta{color:var(--bg);background:var(--accent)}
+
+/* hero */
+.hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:96px;padding-bottom:72px}
+.hero-main{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.ready{font-size:11px;color:var(--yellow);letter-spacing:1px}
+h1{margin:0;font-size:clamp(32px,6vw,64px);line-height:1.25;font-weight:400}
+h1 span{color:var(--accent)}
+.lead{margin:0;font-size:22px;max-width:600px;color:var(--soft)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-size:11px;text-decoration:none;padding:18px 20px;color:var(--text);border:2px solid var(--line)}
+.btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent);box-shadow:4px 4px 0 var(--pink)}
+.btn.primary:hover{color:var(--bg);transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--pink)}
+.btn:hover{color:var(--text);border-color:var(--muted)}
+.card{flex:1 1 300px;min-width:0;background:var(--panel);border:2px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:16px}
+.card-label{font-size:10px;color:var(--muted)}
+.avatar{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border:4px solid var(--bg);box-shadow:0 0 0 2px var(--accent),6px 6px 0 2px var(--pink)}
+.bars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.bars div{display:flex;flex-direction:column;gap:6px}
+.bars span:first-child{font-size:8px;color:var(--muted)}
+.bars span:last-child{height:8px}
+
+/* stats */
+.stats{padding-bottom:96px}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;background:var(--line);border:2px solid var(--line)}
+.stat{background:var(--panel);padding:24px;display:flex;flex-direction:column;gap:10px}
+.stat .v{font-size:22px;font-variant-numeric:tabular-nums}
+.stat .l{color:var(--muted);font-size:15px}
+
+/* levels */
+.levels{display:flex;flex-direction:column;gap:40px;padding-bottom:96px}
+.world{font-size:11px;color:var(--muted);margin-bottom:12px}
+h2{margin:0;font-size:clamp(22px,3.4vw,34px);font-weight:400;line-height:1.4}
+.lvl{background:var(--panel);border:2px solid var(--line);padding:40px;display:flex;flex-wrap:wrap;gap:40px;transition:transform .15s steps(2)}
+.lvl:hover{transform:translateY(-4px)}
+.lvl.side{background:transparent;border-style:dashed}
+.lvl-head{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.lvl-body{flex:999 1 420px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.badge{font-size:10px;color:var(--bg);padding:8px 10px;align-self:flex-start}
+.badge.outline{color:var(--text);border:2px solid var(--text);padding:6px 8px}
+h3{margin:0;font-size:22px;font-weight:400;line-height:1.5}
+.meta{margin:0;color:var(--muted);font-size:15px}
+.lvl p{margin:0}
+.lvl ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:10px;padding:10px 12px;background:var(--panel2);color:var(--text)}
+.chip.brand{background:transparent;border:2px solid var(--pink)}
+.boss{display:flex;flex-direction:column;gap:8px;padding:20px;background:var(--panel2);border:2px solid var(--yellow);color:var(--text);text-decoration:none}
+.boss:hover{color:var(--text);box-shadow:4px 4px 0 var(--yellow)}
+.boss .t{font-size:10px;color:var(--yellow)}
+.boss .go{font-size:9px;color:var(--muted)}
+
+/* contact */
+.contact{display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center;padding-top:48px;padding-bottom:64px}
+.continue{font-size:clamp(22px,4vw,40px);line-height:1.4}
+.continue span{color:var(--yellow)}
+.contact p{margin:0;max-width:560px;color:var(--soft)}
+.mail{font-size:12px;padding:20px 24px;word-break:break-all}
+.socials{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.copy{margin:0;font-size:9px;color:var(--dim)}
+
+/* game lane */
+.lane{position:fixed;left:0;right:0;bottom:0;height:84px;z-index:10;background:var(--bg);border-top:2px solid var(--line)}
+.hud{position:absolute;top:8px;left:16px;right:16px;display:flex;justify-content:space-between;gap:8px;font-size:9px;color:var(--muted)}
+.hud .score{color:var(--yellow)}
+.hud .clear{color:var(--accent);visibility:hidden}
+.hud .clear.on{visibility:visible}
+.track{position:absolute;left:40px;right:40px;bottom:10px;height:44px}
+.track::before{content:"";position:absolute;left:0;right:0;bottom:4px;border-top:2px dashed #2B2846}
+.sprite{position:absolute;bottom:0;transform:translateX(-50%)}
+.sprite svg{display:block}
+.glitch{animation:bob .6s steps(2) infinite}
+.gone{display:none}
+#hero{z-index:2}
+@media (max-width:600px){
+  body{font-size:17px}
+  .hero{padding-top:56px}
+  .lead{font-size:19px}
+  .lvl{padding:24px;gap:24px}
+  .track{left:24px;right:24px}
+  .hud{font-size:8px}
+  #hero svg{width:40px;height:31px}
+  .glitch svg{width:24px;height:21px}
+  .cherry svg{width:16px;height:12px}
+}
+</style>
+</head>
+<body>
+<div class="scan" aria-hidden="true"></div>
+
+<header class="wrap">
+  <a href="#top" class="logo px">KUBA<span>.EXE</span></a>
+  <nav aria-label="Sekcje">
+    <a href="#yt" class="navlink px">YOUTUBE</a>
+    <a href="#press" class="navlink px">PRASA</a>
+    <a href="#social" class="navlink px">SOCIAL</a>
+    <a href="#kontakt" class="navlink cta px">KONTAKT</a>
+  </nav>
+</header>
+
+<main>
+  <section id="top" class="hero wrap">
+    <div class="hero-main">
+      <div class="ready px">PLAYER 1 <span class="blink">▮</span> READY</div>
+      <h1 class="px">Kuba<br><span>Karaś</span></h1>
+      <p class="lead">Content creator, dziennikarz growy i social media manager. Od 11 lat robię wideo o grach, znam branżę od kuchni, a dziś buduję komunikację marek sprzętowych.</p>
+      <div class="btns">
+        <a href="#levels" class="btn primary px">START ▶</a>
+        <a href="#kontakt" class="btn px">NAPISZ DO MNIE</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-label px">CHARACTER SELECT</div>
+      <img class="avatar" src="avatar.jpg" alt="Kuba Karaś" width="900" height="900">
+      <div class="bars" aria-hidden="true">
+        <div><span class="px">VIDEO</span><span style="background:var(--accent)"></span></div>
+        <div><span class="px">PRASA</span><span style="background:var(--yellow)"></span></div>
+        <div><span class="px">SOCIAL</span><span style="background:var(--pink)"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats wrap" aria-label="Statystyki">
+    <div class="stat-grid">
+      <div class="stat"><span class="v px" style="color:var(--accent)">11 LAT</span><span class="l">na YouTube, od 2015</span></div>
+      <div class="stat"><span class="v px" style="color:var(--yellow)" id="subs">31 000</span><span class="l">subskrybentów kanału</span></div>
+      <div class="stat"><span class="v px" style="color:var(--pink)">MAX</span><span class="l">wywiadów i tekstów: niezliczona liczba</span></div>
+    </div>
+  </section>
+
+  <section id="levels" class="levels wrap">
+    <div>
+      <div class="world px">WORLD 1</div>
+      <h2 class="px">Wybierz poziom</h2>
+    </div>
+
+    <article id="yt" class="lvl">
+      <div class="lvl-head">
+        <span class="badge px" style="background:var(--accent)">LVL 1 · 2015 → TERAZ</span>
+        <h3 class="px">Content creator</h3>
+        <p class="meta">Pan KuBaka · <a href="https://www.youtube.com/@PanKuBaka" target="_blank" rel="noopener">youtube.com/@PanKuBaka</a></p>
+      </div>
+      <div class="lvl-body">
+        <p>Od 11 lat prowadzę własny kanał o grach, z naciskiem na Nintendo. Sam wymyślam, nagrywam, montuję i występuję, więc znam cały proces od pomysłu po publikację i analizę wyników.</p>
+        <ul>
+          <li>▸ Recenzje, zapowiedzi, porównania i formaty eksperckie</li>
+          <li>▸ Własna produkcja: scenariusz, zdjęcia, montaż, prowadzenie</li>
+        </ul>
+      </div>
+    </article>
+
+    <article id="press" class="lvl">
+      <div class="lvl-head">
+        <span class="badge px" style="background:var(--yellow)">LVL 2 · OD 11.2022</span>
+        <h3 class="px">Dziennikarz growy</h3>
+        <p class="meta">Filmweb.pl</p>
+      </div>
+      <div class="lvl-body">
+        <p>Od listopada 2022 do kwietnia 2026 byłem dziennikarzem growym Filmweb.pl, a dziś nadal współpracuję z portalem, sprzedając reklamy growe. Przez te lata poznałem branżę od środka: studia, wydawców, PR-owców, twórców i dziennikarzy z innych redakcji. To sieć kontaktów, która otwiera drzwi do wywiadów, eventów i współprac.</p>
+        <ul>
+          <li>▸ Wywiady z twórcami i ludźmi z branży</li>
+          <li>▸ Relacje z targów, premier i eventów</li>
+          <li>▸ Od 04.2026: sprzedaż kampanii reklamowych dla marek growych na Filmweb.pl</li>
+        </ul>
+        <a class="boss" href="https://www.youtube.com/watch?v=5-JT7l7M2eQ" target="_blank" rel="noopener">
+          <span class="t px">★ BOSS FIGHT</span>
+          <span>Wywiad z twórcami <strong>The Legend of Zelda: Tears of the Kingdom</strong> w siedzibie Nintendo of Europe</span>
+          <span class="go px">OBEJRZYJ ▶</span>
+        </a>
+      </div>
+    </article>
+
+    <article id="social" class="lvl">
+      <div class="lvl-head">
+        <span class="badge px" style="background:var(--pink)">LVL 3 · OD 04.2026</span>
+        <h3 class="px">Social Media Manager</h3>
+        <p class="meta">Cooling Sp. z o.o. · marki ENDORFY i Krux</p>
+      </div>
+      <div class="lvl-body">
+        <p>W Cooling Sp. z o.o. odpowiadam za social media dwóch marek sprzętowych: ENDORFY i Krux. Od audytu kanałów, przez filary contentu i kalendarz kwartalny, po kampanie premierowe i rozmowę ze społecznością.</p>
+        <div class="chips">
+          <span class="chip brand px">ENDORFY</span>
+          <span class="chip brand px">KRUX</span>
+        </div>
+        <ul>
+          <li>▸ Strategia kwartalna, filary treści, kalendarz publikacji</li>
+          <li>▸ Kampanie premierowe i okolicznościowe</li>
+          <li>▸ Community management</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="lvl side">
+      <div class="lvl-head">
+        <span class="badge outline px">SIDE QUEST</span>
+        <h3 class="px">Freelance video</h3>
+      </div>
+      <div class="lvl-body">
+        <p>Montaż, rolki, relacje z eventów i prowadzenie przed kamerą. Pracowałem m.in. dla:</p>
+        <div class="chips">
+          <span class="chip px">ALLEGRO</span>
+          <span class="chip px">BETHESDA</span>
+          <span class="chip px">PRUSA</span>
+          <span class="chip px">ASUS</span>
+          <span class="chip px">BENQ</span>
+          <span class="chip px">ANKER</span>
+          <span class="chip px">THE POKÉMON COMPANY</span>
+          <span class="chip px">MATTEL</span>
+          <span class="chip px">SAMSUNG</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="kontakt" class="contact wrap">
+    <div class="continue px">CONTINUE? <span class="blink">9</span></div>
+    <p>Współpraca przy wideo, kampanii albo projekcie dla graczy? Napisz, odpowiadam szybko.</p>
+    <a href="mailto:kuba@pankubaka.pl" class="btn primary mail px">KUBA@PANKUBAKA.PL</a>
+    <div class="socials">
+      <a href="https://www.youtube.com/@PanKuBaka" target="_blank" rel="noopener" class="navlink px">YOUTUBE</a>
+      <a href="https://www.instagram.com/pankubaka/" target="_blank" rel="noopener" class="navlink px">INSTAGRAM</a>
+      <a href="https://www.linkedin.com/in/jakub-karas-61b50a5b/" target="_blank" rel="noopener" class="navlink px">LINKEDIN</a>
+      <a href="https://x.com/pankubaka" target="_blank" rel="noopener" class="navlink px">X</a>
+    </div>
+    <p class="copy px">© 2026 KUBA KARAŚ · ALL LEVELS CLEARED</p>
+  </section>
+</main>
+
+<div class="lane" aria-hidden="true">
+  <div class="hud px">
+    <span>SCORE <span class="score" id="score">000000</span></span>
+    <span class="clear blink" id="clear">LEVEL CLEAR!</span>
+    <span id="hint">PRZEWIŃ, ŻEBY GRAĆ ↓</span>
+  </div>
+  <div class="track" id="track">
+    <div class="sprite" id="hero" style="left:0%">
+      <svg viewBox="0 0 14 11" width="56" height="44" shape-rendering="crispEdges">
+        <rect x="3" y="0" width="1" height="1" fill="#FF4D8D"/><rect x="10" y="0" width="1" height="1" fill="#FF4D8D"/>
+        <rect x="3" y="1" width="1" height="1" fill="#3DE0E0"/><rect x="10" y="1" width="1" height="1" fill="#3DE0E0"/>
+        <rect x="2" y="2" width="10" height="1" fill="#3DE0E0"/><rect x="1" y="3" width="12" height="5" fill="#3DE0E0"/><rect x="2" y="8" width="10" height="1" fill="#3DE0E0"/>
+        <rect x="5" y="3" width="1" height="2" fill="#0D0C17"/><rect x="9" y="3" width="1" height="2" fill="#0D0C17"/>
+        <rect x="2" y="6" width="3" height="1" fill="#0D0C17"/><rect x="3" y="5" width="1" height="3" fill="#0D0C17"/>
+        <rect x="10" y="6" width="1" height="1" fill="#FF4D8D"/><rect x="11" y="5" width="1" height="1" fill="#FFD23F"/>
+        <rect id="legA" x="3" y="9" width="2" height="2" fill="#3DE0E0"/><rect id="legB" x="9" y="9" width="2" height="2" fill="#3DE0E0"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<template id="tpl-cherry">
+  <div class="sprite cherry">
+    <svg viewBox="0 0 9 7" width="27" height="21" shape-rendering="crispEdges">
+      <rect x="4" y="0" width="2" height="1" fill="#5BD16A"/><rect x="3" y="1" width="1" height="2" fill="#5BD16A"/><rect x="6" y="1" width="1" height="2" fill="#5BD16A"/>
+      <rect x="1" y="3" width="3" height="3" fill="#FF3B5C"/><rect x="5" y="3" width="3" height="3" fill="#FF3B5C"/>
+      <rect x="2" y="4" width="1" height="1" fill="#FFFFFF"/><rect x="6" y="4" width="1" height="1" fill="#FFFFFF"/>
+    </svg>
+  </div>
+</template>
+<template id="tpl-glitch">
+  <div class="sprite glitch">
+    <svg viewBox="0 0 9 8" width="36" height="32" shape-rendering="crispEdges">
+      <g class="body" fill="#9B6BFF">
+        <rect x="1" y="0" width="1" height="1"/><rect x="7" y="0" width="1" height="1"/>
+        <rect x="1" y="1" width="7" height="5"/><rect x="0" y="3" width="1" height="2"/><rect x="8" y="3" width="1" height="2"/>
+        <rect x="1" y="6" width="1" height="2"/><rect x="4" y="6" width="1" height="2"/><rect x="7" y="6" width="1" height="2"/>
+      </g>
+      <rect x="2" y="2" width="2" height="2" fill="#FFFFFF"/><rect x="5" y="2" width="2" height="2" fill="#FFFFFF"/>
+      <rect class="pa" x="2" y="3" width="1" height="1" fill="#0D0C17"/><rect class="pb" x="5" y="3" width="1" height="1" fill="#0D0C17"/>
+    </svg>
+  </div>
+</template>
+
+<script>
+(function () {
+  var track = document.getElementById('track');
+  var hero = document.getElementById('hero');
+  var legA = document.getElementById('legA');
+  var legB = document.getElementById('legB');
+  var scoreEl = document.getElementById('score');
+  var hintEl = document.getElementById('hint');
+  var clearEl = document.getElementById('clear');
+  var subsEl = document.getElementById('subs');
+
+  // Collectibles
+  var cherries = [];
+  for (var i = 0; i < 12; i++) {
+    var c = document.getElementById('tpl-cherry').content.firstElementChild.cloneNode(true);
+    var pos = 0.06 + i * 0.08;
+    c.style.left = (pos * 100) + '%';
+    track.insertBefore(c, hero);
+    cherries.push({ el: c, pos: pos });
+  }
+  var glitches = [0.22, 0.46, 0.7, 0.86].map(function (b) {
+    var g = document.getElementById('tpl-glitch').content.firstElementChild.cloneNode(true);
+    g.style.left = (b * 100) + '%';
+    track.insertBefore(g, hero);
+    return { el: g, base: b, body: g.querySelector('.body'), pa: g.querySelector('.pa'), pb: g.querySelector('.pb') };
+  });
+
+  var last = window.scrollY, dir = 1, ticking = false;
+
+  function update() {
+    ticking = false;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var top = window.scrollY;
+    var p = max > 0 ? Math.max(0, Math.min(1, top / max)) : 0;
+    if (top > last) dir = 1; else if (top < last) dir = -1;
+    last = top;
+
+    var score = 0;
+    cherries.forEach(function (c) {
+      var alive = p < c.pos;
+      if (!alive) score += 100;
+      c.el.classList.toggle('gone', !alive);
+    });
+    glitches.forEach(function (g) {
+      var start = g.base - 0.12, pos = g.base, scared = false;
+      if (p >= start) { pos = g.base + (p - start) * 0.5; scared = true; }
+      var alive = p < pos;
+      if (!alive) score += 500;
+      g.el.style.left = (pos * 100) + '%';
+      g.el.classList.toggle('gone', !alive);
+      g.body.setAttribute('fill', scared ? '#5B7BFF' : '#9B6BFF');
+      g.pa.setAttribute('x', scared ? 3 : 2);
+      g.pb.setAttribute('x', scared ? 6 : 5);
+    });
+
+    var step = Math.floor(top / 28) % 2;
+    legA.setAttribute('x', step ? 2 : 3);
+    legB.setAttribute('x', step ? 10 : 9);
+    hero.style.left = (p * 100) + '%';
+    hero.style.transform = 'translateX(-50%) scaleX(' + dir + ')';
+
+    var s = String(score);
+    scoreEl.textContent = '000000'.slice(s.length) + s;
+    hintEl.textContent = p < 0.02 ? 'PRZEWIŃ, ŻEBY GRAĆ ↓' : Math.round(p * 100) + '%';
+    clearEl.classList.toggle('on', p >= 0.99);
+  }
+
+  function onScroll() {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+
+  // Subscriber counter: starts at 31 000 and keeps growing during the visit
+  var subs = 31000;
+  function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+  function tick() {
+    subs += 1 + (Math.random() < 0.25 ? 1 : 0);
+    subsEl.textContent = fmt(subs);
+    setTimeout(tick, 700 + Math.random() * 1300);
+  }
+  setTimeout(tick, 900);
+})();
+</script>
+</body>
+</html>
